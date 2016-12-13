@@ -246,7 +246,7 @@ function(drug,
           legend.values2[[i]] <- paste(legend.values2[i][[1]],sprintf("%s = %s", "AUC", round(computeAUC(concentrations[[i]],viabilities[[i]], conc_as_log=FALSE, viability_as_pct=TRUE)/100, digits=2)), sep=", ")
         }
         if(any(grepl("IC50", x=toupper(legends.label)))){
-          legend.values2[[i]] <- paste(legend.values2[i][[1]],sprintf("%s = %s", "IC50", round(computeIC50(concentrations[[i]],viabilities[[i]], conc_as_log=FALSE, viability_as_pct=TRUE), digits=6)), sep=", ")
+          legend.values2[[i]] <- paste(legend.values2[i][[1]],sprintf("%s = %s", "IC50", 1-round(computeIC50(concentrations[[i]],viabilities[[i]], conc_as_log=FALSE, viability_as_pct=TRUE), digits=6)), sep=", ")
         }
 
       } else{ legend.values2[[i]] <- ""}
