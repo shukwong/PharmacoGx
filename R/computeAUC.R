@@ -113,6 +113,8 @@ else {
     }
 }
 
+AUC <- 1 -AUC
+
 if(viability_as_pct){
 
   AUC <- AUC*100
